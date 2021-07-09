@@ -3,19 +3,19 @@ import yaml
 from abc import ABC
 
 
-Levels = yaml.load(
-'''
-levels:
-    - !easy_level {}
-    - !medium_level
-        enemy: ['rat']
-    - !hard_level
-        enemy:
-            - rat
-            - snake
-            - dragon
-        enemy_count: 10
-''')
+# Levels = yaml.load(
+# '''
+# levels:
+#     - !easy_level {}
+#     - !medium_level
+#         enemy: ['rat']
+#     - !hard_level
+#         enemy:
+#             - rat
+#             - snake
+#             - dragon
+#         enemy_count: 10
+# ''')
 
 class AbstractLevel(yaml.YAMLObject):
 
