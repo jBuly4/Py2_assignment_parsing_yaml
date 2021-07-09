@@ -32,7 +32,7 @@ class AbstractLevel(yaml.YAMLObject):
 
         def get_level(loader, node):
             data = loader.construct_mapping(node)
-            lvl = {'map' : cls.get_map(), 'objects' : cls.get_objects()}
+            lvl = {'map' : cls.get_map(), 'obj' : cls.get_objects()}
             return lvl
 
         return get_level(loader, node)
