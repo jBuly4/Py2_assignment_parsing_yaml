@@ -1,4 +1,4 @@
-mport random
+import random
 import yaml
 from abc import ABC
 
@@ -46,6 +46,8 @@ class AbstractLevel(yaml.YAMLObject):
 
 
 class EasyLevel(AbstractLevel):
+    yaml_tag = '!easy_level'
+
     class Map:
         def __init__(self):
             self.Map = [[0 for _ in range(5)] for _ in range(5)]
@@ -81,6 +83,8 @@ class EasyLevel(AbstractLevel):
 
 
 class MediumLevel(AbstractLevel):
+    yaml_tag = '!medium_level'
+
     class Map:
         def __init__(self):
             self.Map = [[0 for _ in range(8)] for _ in range(8)]
@@ -116,6 +120,8 @@ class MediumLevel(AbstractLevel):
 
 
 class HardLevel(AbstractLevel):
+    yaml_tag = '!hard_level'
+
     class Map:
         def __init__(self):
             self.Map = [[0 for _ in range(10)] for _ in range(10)]
