@@ -38,6 +38,16 @@ class AbstractLevel(yaml.YAMLObject):
 
         return get_level(loader, node)
 
+    ''' solution
+    @classmethod
+    def from_yaml(cls, loader, node):
+        _map = cls.Map()
+        _obj = cls.Objects()
+        config = loader.construct_mapping(node)
+        _obj.config.update(config)
+        return {'map': _map, 'obj': _obj}
+        '''
+
 
     class Map(ABC):
         pass
